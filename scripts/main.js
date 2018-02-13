@@ -3,7 +3,7 @@ var myImage = document.querySelector('img');
 myImage.onclick = function() {
     var mySrc = myImage.getAttribute('src');
     if(mySrc === 'images/process.jpeg') {
-      myImage.setAttribute ('src','images/football.png');
+      myImage.setAttribute ('src','images/chelseacrest.png');
     } else {
       myImage.setAttribute ('src','images/process.jpeg');
     }
@@ -14,12 +14,12 @@ var myHeading = document.querySelector('h1');
 function setUserName() {
   var myName = prompt('Please enter your name.');
   localStorage.setItem('name', myName);
-  myHeading.textContent = 'Mozilla is cool, ' + myName;
+  myHeading.textContent = 'Chelsea Fan: , ' + myName;
 }
 
 if(!localStorage.getItem('name')) {
   setUserName();
 } else {
   var storedName = localStorage.getItem('name');
-  myHeading.textContent = 'Mozilla is cool, ' + storedName;
+  myHeading.textContent = 'Welcome Back, ' + storedName +"!";
 }
